@@ -27,6 +27,7 @@ def next_user(snacks,drinks):
             c=input('Which snack item would you like to add in you cart?')
             a=int(c)
             if a==1 or a==2 or a==3 or a==4 or a==5 or a==6 or a==7 or a==0:
+                #Out of Stock (Stock system)
                 if snacks[a][2]<1:
                     print("This product is out of stock! \n\tWe apologize. :(")
                 else:
@@ -137,7 +138,7 @@ def next_user(snacks,drinks):
                 print('Please add more cash to purchase:')
                 more=amount-csh
                 print("More amount needed:",more)
-                cas=int(input("Enter more amount: "))
+                cas=float(input("Enter more amount: "))
                 csh=csh+cas            
                 if csh>amount:
                     perfect_cash(amount,csh)
